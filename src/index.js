@@ -14,14 +14,24 @@ linksList[0].addEventListener('click', loadHome, false);
 linksList[1].addEventListener('click', loadMenu, false);
 linksList[2].addEventListener('click', loadContact, false);
 document.body.appendChild(loadFooter());
-const fetchWeather = async () => {
-  const response = await fetch('http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=d917a8125d1d2b9470fefaa25bd2d8e3', { mode: 'cors' });
-  const data = await response.json();
+
+const fetchWeather = async (name) => {
+  const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${name}&APPID=d917a8125d1d2b9470fefaa25bd2d8e3`, { mode: 'cors' });
+  const data = response.json();
   console.log(data);
 };
-fetchWeather();
-const btn = document.querySelector('button');
-btn.addEventListener('click', fetchWeather);
+// fetchWeather(cityName);
+const btn = document.getElementById('submitBtn');
+btn.addEventListener('click', (e) => {
+  const cityName = document.getElementById('city_name').value;
+  console.log(cityName);
+  fetchWeather(cityName);
+  e.preventDefault();
+});
 
-const cityName = document.getElementById('city_name').value;
-console.log(cityName);
+// btn.addEventListener('click', (e) => {
+// const name = new FormData(document.getElementById('form'));
+// console.log(name);
+// fetchWeather(cityName);
+//  e.preventDefault();
+// });
