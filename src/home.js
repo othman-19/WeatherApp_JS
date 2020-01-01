@@ -1,6 +1,7 @@
 const content = document.getElementById('content');
 const temp = document.getElementById('temp');
 
+
 function addForm() {
   const form = temp.content.cloneNode(true);
   return form;
@@ -25,4 +26,5 @@ function loadHome() {
   content.appendChild(activities);
   return content;
 }
+
 export default loadHome;

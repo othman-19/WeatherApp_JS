@@ -33,7 +33,7 @@
     color : white;
     display: inline-block;
     padding: 0px 7px;
-    margin-left: 20%;
+    margin-left: 5%;
     cursor: pointer;
   }
   
@@ -59,9 +59,11 @@
     font-size: 1em;
   }
   button{
+    font-family: 'bodyFont';
     border-radius: 10px;
     border-style: solid;
-    font-size: 0.7em;
+    font-size: 0.8em;
+    cursor: pointer;
   }
   ul li{
     margin: 0% 10%;
