@@ -10,20 +10,25 @@ function addForm() {
 function loadHome() {
   content.innerHTML = '';
   content.appendChild(addForm());
-  const activities = document.createElement('UL');
-  activities.setAttribute('id', 'activities');
+  const infoList = document.createElement('UL');
+  infoList.setAttribute('id', 'infoList');
   for (let i = 0; i < 5; i += 1) {
     const item = document.createElement('li');
-    item.setAttribute('id', `activity-${i}`);
-    activities.appendChild(item);
+    item.setAttribute('id', `item-${i}`);
+    infoList.appendChild(item);
   }
-  const activityList = activities.children;
-  activityList[0].innerHTML = 'obj';
-  activityList[1].innerHTML = 'Front end pizza party.';
-  activityList[2].innerHTML = 'Back end pizza party.';
-  activityList[3].innerHTML = 'Full stack pizza party.';
-  activityList[4].innerHTML = 'Microverse pizza party.';
-  content.appendChild(activities);
+  const activityList = infoList.children;
+  activityList[0].innerText = 'City: ';
+  activityList[0].insertAdjacentHTML('beforeend', '<span class ="infoSpan"></span>');
+  activityList[1].innerText = 'Main: ';
+  activityList[1].insertAdjacentHTML('beforeend', '<span class ="infoSpan"></span>');
+  activityList[2].innerText = 'Temperator: ';
+  activityList[2].insertAdjacentHTML('beforeend', '<span class ="infoSpan"></span>');
+  activityList[3].innerText = 'Humidity: ';
+  activityList[3].insertAdjacentHTML('beforeend', '<span class ="infoSpan"></span>');
+  activityList[4].innerText = 'WindSpeed: ';
+  activityList[4].insertAdjacentHTML('beforeend', '<span class ="infoSpan"></span>');
+  content.appendChild(infoList);
   return content;
 }
 

@@ -32,7 +32,6 @@ const fetchWeather = async (name) => {
   }
 };
 
-
 const showData = (fields, info) => {
   for (let i = 0; i < fields.length; i += 1) {
     const field = fields[i];
@@ -40,12 +39,12 @@ const showData = (fields, info) => {
   }
 };
 
-const dataFields = document.querySelectorAll('li');
+const dataFields = document.querySelectorAll('.infoSpan');
+console.log(dataFields);
 const btn = document.getElementById('submitBtn');
 btn.addEventListener('click', (e) => {
   const cityName = document.getElementById('city_name').value;
   fetchWeather(cityName).then((result) => {
-    console.log(result);
     showData(dataFields, result);
   });
   e.preventDefault();
