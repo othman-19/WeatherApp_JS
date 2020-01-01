@@ -1,7 +1,7 @@
 import headerload from './header';
 import loadFooter from './footer';
 import loadHome from './home';
-import loadMenu from './info';
+import loadInfo from './info';
 import loadContact from './contact';
 import './style.css';
 
@@ -11,9 +11,18 @@ document.body.appendChild(loadHome());
 const navbar = document.getElementById('navBar');
 const linksList = navbar.childNodes;
 linksList[0].addEventListener('click', loadHome, false);
-linksList[1].addEventListener('click', loadMenu, false);
+linksList[1].addEventListener('click', loadInfo, false);
 linksList[2].addEventListener('click', loadContact, false);
 document.body.appendChild(loadFooter());
+
+const showData = (fields, info) => {
+  for (let i = 0; i < fields.length; i += 1) {
+    const field = fields[i];
+    field.innerHTML = info[i];
+  }
+};
+
+const dataFields = document.querySelectorAll('.infoSpan');
 
 const fetchWeather = async (name) => {
   try {
@@ -27,18 +36,10 @@ const fetchWeather = async (name) => {
     const dataArr = [city, weatherStatus, temperature, hum, windSpeed];
     return dataArr;
   } catch (error) {
-    return ('error');
+    showData(dataFields, 'error');
+    return error;
   }
 };
-
-const showData = (fields, info) => {
-  for (let i = 0; i < fields.length; i += 1) {
-    const field = fields[i];
-    field.innerHTML = info[i];
-  }
-};
-
-const dataFields = document.querySelectorAll('.infoSpan');
 const btn = document.getElementById('submitBtn');
 btn.addEventListener('click', (e) => {
   const cityName = document.getElementById('city_name').value;
