@@ -17,7 +17,7 @@ document.body.appendChild(loadFooter());
 
 const fetchWeather = async (name) => {
   try {
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${name}&APPID=d917a8125d1d2b9470fefaa25bd2d8e3`, { mode: 'cors' });
+    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${name}&units=metric&APPID=d917a8125d1d2b9470fefaa25bd2d8e3`, { mode: 'cors' });
     const data = await response.json();
     const weatherStatus = data.weather[0].main;
     const hum = data.main.humidity;
@@ -25,7 +25,6 @@ const fetchWeather = async (name) => {
     const windSpeed = data.wind.speed;
     const city = data.name;
     const dataArr = [city, weatherStatus, temperature, hum, windSpeed];
-    console.log(dataArr);
     return dataArr;
   } catch (error) {
     return ('error');
@@ -40,12 +39,11 @@ const showData = (fields, info) => {
 };
 
 const dataFields = document.querySelectorAll('.infoSpan');
-console.log(dataFields);
 const btn = document.getElementById('submitBtn');
 btn.addEventListener('click', (e) => {
   const cityName = document.getElementById('city_name').value;
-  fetchWeather(cityName).then((result) => {
-    showData(dataFields, result);
+  fetchWeather(cityName).then((info) => {
+    showData(dataFields, info);
   });
   e.preventDefault();
 });

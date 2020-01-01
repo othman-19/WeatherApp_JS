@@ -24,7 +24,7 @@ function loadHome() {
   activityList[1].insertAdjacentHTML('beforeend', '<span class ="infoSpan"></span>');
   activityList[2].innerText = 'Temperator: ';
   activityList[2].insertAdjacentHTML('beforeend', '<span class ="infoSpan"></span>');
-  activityList[3].innerText = 'Humidity: ';
+  activityList[3].innerText = 'Humidity : ';
   activityList[3].insertAdjacentHTML('beforeend', '<span class ="infoSpan"></span>');
   activityList[4].innerText = 'WindSpeed: ';
   activityList[4].insertAdjacentHTML('beforeend', '<span class ="infoSpan"></span>');
