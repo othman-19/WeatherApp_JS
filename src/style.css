@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'logoFont';
+    src: url('./donovan.woff') format('woff');
+  }
+  
+  @font-face {
+    font-family: 'bodyFont';
+    src: url('./HorizonRounded.otf') format('woff');
+  }
+  
+  body{
+    font-family: 'bodyFont';
+    background: url('./wallpaper.jpg');
+    background-color: #c94747;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    color:whitesmoke;
+  }
+  
+  #logo{
+    font-family: 'logoFont';
+    font-size: 3em;
+    background-color:rgba(73, 75, 78, 0.267) ;
+    color : white;
+    display: inline-block;
+    padding: 0px 7px;
+  }
+  
+  #navBar{
+    font-size: 2em;
+    background-color:rgba(73, 75, 78, 0.267) ;
+    color : white;
+    display: inline-block;
+    padding: 0px 7px;
+    margin-left: 20%;
+    cursor: pointer;
+  }
+  
+  a:hover {
+    color: yellow;
+    font-size: 1.2em;
+  }
+  
+  #content{
+    padding: 2% 25%;
+    background-color:rgba(151, 41, 41, 0.26);
+  }
+  form {
+    font-size: 1.5em;
+    display: inline-block;
+    padding: 0px 7px;
+    margin: 5% 0%;
+  }
+  input {
+    border-radius: 10px;
+    border-style: solid;
+    width: 50%;
+    font-size: 1em;
+  }
+  button{
+    border-radius: 10px;
+    border-style: solid;
+    font-size: 0.7em;
+  }
+  ul li{
+    margin: 0% 10%;
+    font-size: 1.5em;
+    padding: 0 0 6px 0;
+  }
+  #footer{
+    font-size: 0.8em;
+    text-align: center
+  }
