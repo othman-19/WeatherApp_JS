@@ -71,7 +71,14 @@
     padding: 0 0 6px 0;
   }
   span {
-    color : rgb(24, 22, 22)
+    color : rgb(240, 240, 9)
+  }
+  .weatherIcon{
+    width: 130px;
+    position: absolute;
+    top:42%;
+    left: 52%;
+    background-color: rgba(2, 13, 34, 0.699);
   }
   #footer{
     font-size: 0.8em;
