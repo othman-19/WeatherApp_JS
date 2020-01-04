@@ -1,6 +1,9 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Weather App</title>
   </head>
   <body>
@@ -14,6 +17,14 @@
         <input id="city_name" type = 'text' name="city_name" required>
         <input id = 'submitBtn' type ="submit" value = 'OK'>
       </form>
+    </template>
+    <template id  = 'toggleTemp'>
+      <span>C°</span>
+      <label class="switch" id = "switchBtn">
+        <input type="checkbox" id="switchInput">
+        <span class="slider round"></span>
+      </label>
+      <span>F°</span>
     </template>
     <script src="./main.js"></script>
   </body>

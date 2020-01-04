@@ -1,12 +1,16 @@
 import headerload from './header';
 import loadFooter from './footer';
-import loadHome from './home';
+import { loadHome, addToggle } from './home';
 import loadInfo from './info';
 import loadContact from './contact';
 import './style.css';
 
-document.body.appendChild(headerload());
-document.body.appendChild(loadHome());
+const header = headerload();
+const home = loadHome();
+
+document.body.appendChild(header);
+document.body.appendChild(home);
+const dataFields = document.querySelectorAll('.infoSpan');
 
 const navbar = document.getElementById('navBar');
 const linksList = navbar.childNodes;
@@ -18,16 +22,33 @@ document.body.appendChild(loadFooter());
 const showData = (fields, info) => {
   for (let i = 0; i < 5; i += 1) {
     const field = fields[i];
-    field.innerHTML = info[i];
+    if (i === 2) {
+      field.innerHTML = `${info[i]} C°`;
+    } else {
+      field.innerHTML = info[i];
+    }
   }
+};
+
+const switchTemp = (btn, span) => {
+  const spn = span;
+  const c = parseInt(dataFields[2].innerText, 10);
+  console.log(btn.checked);
+  if (btn.checked) {
+    spn.innerText = `${(Math.round(c * (9 / 5) + 32))} F°`;
+  } else {
+    spn.innerText = `${Math.round((c - 32) * (5 / 9))} C°`;
+  }
+};
+
+const changeStyle = (fields, info) => {
   const mainField = fields[0];
   const iconLink = `http://openweathermap.org/img/w/${info[5]}.png`;
   mainField.insertAdjacentHTML('beforeend', `<img class ="weatherIcon" id = info[5] src = ${iconLink}>`);
+  const switchSpan = document.getElementById('switchSpan');
+  switchSpan.appendChild(addToggle());
   document.body.style.backgroundImage = `url('./Wallpaper/${info[1]}.jpg')`;
 };
-
-const dataFields = document.querySelectorAll('.infoSpan');
-
 const fetchWeather = async (name) => {
   try {
     const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${name}&units=metric&APPID=d917a8125d1d2b9470fefaa25bd2d8e3`, { mode: 'cors' });
@@ -50,6 +71,10 @@ btn.addEventListener('click', (e) => {
   const cityName = document.getElementById('city_name').value;
   fetchWeather(cityName).then((info) => {
     showData(dataFields, info);
+    changeStyle(dataFields, info);
+    const switchBtn = document.getElementById('switchBtn');
+    const switchInput = document.getElementById('switchInput');
+    switchBtn.addEventListener('change', () => { switchTemp(switchInput, dataFields[2]); }, false);
   });
   e.preventDefault();
 });

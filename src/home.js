@@ -1,10 +1,14 @@
 const content = document.getElementById('content');
 const temp = document.getElementById('temp');
-
+const toggleTemp = document.getElementById('toggleTemp');
 
 function addForm() {
   const form = temp.content.cloneNode(true);
   return form;
+}
+function addToggle() {
+  const toggle = toggleTemp.content.cloneNode(true);
+  return toggle;
 }
 
 function loadHome() {
@@ -24,6 +28,7 @@ function loadHome() {
   activityList[1].insertAdjacentHTML('beforeend', '<span class ="infoSpan"></span>');
   activityList[2].innerText = 'Temperator: ';
   activityList[2].insertAdjacentHTML('beforeend', '<span class ="infoSpan"></span>');
+  activityList[2].insertAdjacentHTML('beforeend', '<span id ="switchSpan"></span>');
   activityList[3].innerText = 'Humidity : ';
   activityList[3].insertAdjacentHTML('beforeend', '<span class ="infoSpan"></span>');
   activityList[4].innerText = 'WindSpeed: ';
@@ -32,4 +37,4 @@ function loadHome() {
   return content;
 }
 
-export default loadHome;
+export { loadHome, addToggle };
