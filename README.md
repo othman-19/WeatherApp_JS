@@ -19,7 +19,7 @@ The Weather App project comes at the end of the Asynchronous Javascript and APIs
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://raw.githack.com/othman-19/WeatherApp_JS/feature/dist/index.html)
 
 To get a local copy up and running follow these simple example steps.
 

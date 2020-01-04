@@ -46,6 +46,7 @@ const changeStyle = (fields, info) => {
   const iconLink = `http://openweathermap.org/img/w/${info[5]}.png`;
   mainField.insertAdjacentHTML('beforeend', `<img class ="weatherIcon" id = info[5] src = ${iconLink}>`);
   const switchSpan = document.getElementById('switchSpan');
+  switchSpan.innerHTML = '';
   switchSpan.appendChild(addToggle());
   document.body.style.backgroundImage = `url('./Wallpaper/${info[1]}.jpg')`;
 };
