@@ -33,7 +33,7 @@ const showData = (fields, info) => {
 const switchTemp = (btn, span) => {
   const spn = span;
   const c = parseInt(dataFields[2].innerText, 10);
-  console.log(btn.checked);
+
   if (btn.checked) {
     spn.innerText = `${(Math.round(c * (9 / 5) + 32))} F°`;
   } else {
