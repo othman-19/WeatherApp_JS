@@ -52,7 +52,10 @@ const changeStyle = (fields, info) => {
 };
 const fetchWeather = async (name) => {
   try {
-    const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${name}&units=metric&APPID=d917a8125d1d2b9470fefaa25bd2d8e3`, { mode: 'cors' });
+    const response = await fetch(
+      `http://api.openweathermap.org/data/2.5/weather?q=${name}&units=metric&APPID=eb8aa7c723aa5fb08232fd43f7f3c0ca`,
+      { mode: 'cors' },
+    );
     const data = await response.json();
     const weatherStatus = data.weather[0].main;
     const iconId = data.weather[0].icon;
