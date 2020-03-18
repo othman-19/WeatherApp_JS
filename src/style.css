@@ -1,69 +1,276 @@
 @font-face {
-    font-family: 'logoFont';
-    src: url('./donovan.woff') format('woff');
+  font-family: 'logoFont';
+  src: url('./donovan.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'bodyFont';
+  src: url('./HorizonRounded.otf') format('woff');
+}
+
+body{
+  font-family: 'bodyFont';
+  background: url('./wallpaper.jpg') no-repeat center center fixed;
+  background-color: #c94747;
+  background-size: cover; 
+  color:whitesmoke;
+}
+
+#logo {
+  font-family: 'logoFont';
+  font-size: 2em;
+  background-color:rgba(73, 75, 78, 0.267) ;
+  color : white;
+  display: inline-block;
+  padding: 0px 7px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#content {
+  font-size: 0.9em;
+  padding: 2% 5%;
+  background-color:rgba(151, 41, 41, 0.26);
+  margin: 20% 0% 30% 0;
+}
+
+#navBar{
+  font-size: 1em;
+  background-color:rgba(73, 75, 78, 0.267) ;
+  color : white;
+  display: inline-block;
+  padding: 0px 7px;
+  cursor: pointer;
+}
+
+a:hover {
+  color: rgb(240, 240, 9);
+  font-size: 1.1em;
+}
+
+form {
+  display: inline-block;
+  padding: 0px 7px;
+  margin: 1% 0%;
+}
+
+input {
+  border-radius: 10px;
+  width: 50%;
+  font-size: 0.9em;
+}
+#submitBtn{
+  font-family: 'bodyFont';
+  border-radius: 10px;
+  border-style: solid;
+  font-size: 0.8em;
+  cursor: pointer;
+  width: auto;
+}
+
+h2, p {
+  font-size: 1em;
+}
+
+.infoSpan{
+  margin-right: 5%;
+}
+
+span {
+  color : rgb(240, 240, 9)
+}
+
+.weatherIcon {
+  width: 30px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+#footer{
+  font-size: 0.6em;
+  text-align: center
+}
+
+@media screen and (min-width: 375px) {
+  #content {
+    font-size: 1em;
+    margin: 10% 0% 20% 0;
   }
-  
-  @font-face {
-    font-family: 'bodyFont';
-    src: url('./HorizonRounded.otf') format('woff');
+  form {
+    margin: 5% 5%;
   }
-  
-  body{
-    font-family: 'bodyFont';
-    background: url('./wallpaper.jpg') no-repeat center center fixed;
-    background-color: #c94747;
-    background-size: cover; 
-    color:whitesmoke;
-  }
+}
+
+@media screen and (min-width: 425px) {
   #logo {
+    text-align: center;
+    width: 100%;
+    font-size: 2.5em;
+  }
+
+  #navBar{
+    font-size: 1.2em;
+    cursor: pointer;
+  }
+
+  #content {
+    font-size: 1em;
+    margin: 10% 0% 10% 0;
+  }
+
+  form {
+    margin: 5% 10%;
+  }
+}
+
+/*///////////////////////////////////////////////////*/
+
+@media screen and (min-width: 520px) {
+  #content{
+    padding: 2% 5%;
+    margin: 10% 0% 10% 0;
+  }
+  form {
+    font-size: 1.5em;
+    display: inline-block;
+    padding: 0px 7px;
+    margin: 5% 0%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  #content{
+    padding: 2% 10%;
+    margin: 5% 0% 5% 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #content{
+    padding: 2% 5%;
+    margin: 5% 0% 5% 0;
+  }
+  form {
+    font-size: 2em;
+    margin: 0% 5%;
+  }
+  ul li {
+    margin: 0% 5%;
+    font-size: 1.5em;
+    padding: 0 0 6px 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    display: block;
+  }
+
+  #logo{
+    width:auto;
     font-family: 'logoFont';
+    font-size: 3em;
+    background-color:rgba(73, 75, 78, 0.267) ;
+    color : white;
+    display: inline-block;
+    padding: 0px 7px;
+  }
+  
+  #navBar{
     font-size: 2em;
     background-color:rgba(73, 75, 78, 0.267) ;
     color : white;
     display: inline-block;
     padding: 0px 7px;
-  }
-
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  #content {
-    font-size: 0.9em;
-    padding: 2% 5%;
-    background-color:rgba(151, 41, 41, 0.26);
-    margin: 20% 0% 40% 0;
-  }
-  
-  #navBar{
-    font-size: 1em;
-    background-color:rgba(73, 75, 78, 0.267) ;
-    color : white;
-    display: inline-block;
-    padding: 0px 7px;
+    margin-left: 5%;
     cursor: pointer;
   }
   
   a:hover {
-    color: rgb(240, 240, 9);
-    font-size: 1.1em;
+    color: yellow;
+    font-size: 1.2em;
+  }
+  
+  #content{
+    padding: 2% 25%;
+    background-color:rgba(151, 41, 41, 0.26);
   }
 
   form {
-    
+    font-size: 1.5em;
     display: inline-block;
     padding: 0px 7px;
-    margin: 1% 0%;
+    margin: 5% 0%;
   }
 
   input {
     border-radius: 10px;
     width: 50%;
-    font-size: 0.9em;
+    font-size: 1em;
   }
-  #submitBtn{
+
+  #submitBtn {
     font-family: 'bodyFont';
     border-radius: 10px;
     border-style: solid;
@@ -71,27 +278,27 @@
     cursor: pointer;
     width: auto;
   }
-  h2, p {
-    font-size: 1em;
+
+  ul li {
+    margin: 0% 10%;
+    font-size: 1.5em;
+    padding: 0 0 6px 0;
   }
 
-  .infoSpan{
-    margin-right: 5%;
+  .infoSpan {
+    margin-right: 10%;
   }
-
   span {
     color : rgb(240, 240, 9)
   }
-
   .weatherIcon {
-    width: 30px;
+  
   }
-
   .switch {
     position: relative;
     display: inline-block;
-    width: 30px;
-    height: 17px;
+    width: 60px;
+    height: 34px;
   }
   
   .switch input { 
@@ -115,10 +322,10 @@
   .slider:before {
     position: absolute;
     content: "";
-    height: 13px;
-    width: 13px;
-    left: 2px;
-    bottom: 2px;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
@@ -133,9 +340,9 @@
   }
   
   input:checked + .slider:before {
-    -webkit-transform: translateX(13px);
-    -ms-transform: translateX(13px);
-    transform: translateX(13px);
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
   }
 
   .slider.round {
@@ -147,134 +354,8 @@
   }
 
   #footer{
-    font-size: 0.6em;
+    font-size: 0.8em;
     text-align: center
   }
-  
-  @media screen and (min-width: 1024px) {
-    #logo{
-      font-family: 'logoFont';
-      font-size: 3em;
-      background-color:rgba(73, 75, 78, 0.267) ;
-      color : white;
-      display: inline-block;
-      padding: 0px 7px;
-    }
-    
-    #navBar{
-      font-size: 2em;
-      background-color:rgba(73, 75, 78, 0.267) ;
-      color : white;
-      display: inline-block;
-      padding: 0px 7px;
-      margin-left: 5%;
-      cursor: pointer;
-    }
-    
-    a:hover {
-      color: yellow;
-      font-size: 1.2em;
-    }
-    
-    #content{
-      padding: 2% 25%;
-      background-color:rgba(151, 41, 41, 0.26);
-    }
-    form {
-      font-size: 1.5em;
-      display: inline-block;
-      padding: 0px 7px;
-      margin: 5% 0%;
-    }
-    input {
-      border-radius: 10px;
-      width: 50%;
-      font-size: 1em;
-    }
-    #submitBtn{
-      font-family: 'bodyFont';
-      border-radius: 10px;
-      border-style: solid;
-      font-size: 0.8em;
-      cursor: pointer;
-      width: auto;
-    }
-    ul li{
-      margin: 0% 10%;
-      font-size: 1.5em;
-      padding: 0 0 6px 0;
-    }
 
-    .infoSpan{
-      margin-right: 10%;
-    }
-    span {
-      color : rgb(240, 240, 9)
-    }
-    .weatherIcon{
-    
-    
-    }
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 60px;
-      height: 34px;
-    }
-    
-    .switch input { 
-      opacity: 0;
-      width: 0;
-      height: 0;
-    }
-    
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #ccc;
-      -webkit-transition: .4s;
-      transition: .4s;
-    }
-    
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 26px;
-      width: 26px;
-      left: 4px;
-      bottom: 4px;
-      background-color: white;
-      -webkit-transition: .4s;
-      transition: .4s;
-    }
-    
-    input:checked + .slider {
-      background-color: #2196F3;
-    }
-    
-    input:focus + .slider {
-      box-shadow: 0 0 1px #2196F3;
-    }
-    
-    input:checked + .slider:before {
-      -webkit-transform: translateX(26px);
-      -ms-transform: translateX(26px);
-      transform: translateX(26px);
-    }
-
-    .slider.round {
-      border-radius: 34px;
-    }
-    
-    .slider.round:before {
-      border-radius: 50%;
-    }
-    #footer{
-      font-size: 0.8em;
-      text-align: center
-    }
-  }
+}
