@@ -78,11 +78,8 @@
     color : rgb(240, 240, 9)
   }
   .weatherIcon{
-    width: 130px;
-    position: absolute;
-    top:43%;
-    left: 65%;
-    background-color: rgba(18, 22, 235, 0.884);
+   
+   
   }
   .switch {
     position: relative;
