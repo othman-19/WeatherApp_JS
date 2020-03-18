@@ -43,7 +43,7 @@ const switchTemp = (btn, span) => {
 
 const changeStyle = (fields, info) => {
   const mainField = fields[0];
-  const iconLink = `http://openweathermap.org/img/w/${info[5]}.png`;
+  const iconLink = `https://openweathermap.org/img/w/${info[5]}.png`;
   mainField.insertAdjacentHTML('beforeend', `<img class ="weatherIcon" id = info[5] src = ${iconLink}>`);
   const switchSpan = document.getElementById('switchSpan');
   switchSpan.innerHTML = '';
@@ -53,7 +53,7 @@ const changeStyle = (fields, info) => {
 const fetchWeather = async (name) => {
   try {
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${name}&units=metric&APPID=eb8aa7c723aa5fb08232fd43f7f3c0ca`,
+      `https://api.openweathermap.org/data/2.5/weather?q=${name}&units=metric&APPID=eb8aa7c723aa5fb08232fd43f7f3c0ca`,
       { mode: 'cors' },
     );
     const data = await response.json();
