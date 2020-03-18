@@ -2,6 +2,7 @@ const headerTemp = document.getElementById('headerTemp');
 
 function loadHeader() {
   const header = document.createElement('HEADER');
+  header.setAttribute('class', 'container');
   const logo = document.createElement('H1');
   logo.setAttribute('id', 'logo');
   logo.innerHTML = 'Weather-City';

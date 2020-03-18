@@ -11,7 +11,6 @@ const home = loadHome();
 document.body.appendChild(header);
 document.body.appendChild(home);
 const dataFields = document.querySelectorAll('.infoSpan');
-
 const navbar = document.getElementById('navBar');
 const linksList = navbar.childNodes;
 linksList[0].addEventListener('click', loadHome, false);
@@ -66,19 +65,22 @@ const fetchWeather = async (name) => {
     const dataArr = [city, weatherStatus, temperature, hum, windSpeed, iconId];
     return dataArr;
   } catch (error) {
-    showData(dataFields, 'error');
-    return error;
+    return 'error';
   }
 };
 const btn = document.getElementById('submitBtn');
 btn.addEventListener('click', (e) => {
   const cityName = document.getElementById('city_name').value;
   fetchWeather(cityName).then((info) => {
-    showData(dataFields, info);
-    changeStyle(dataFields, info);
-    const switchBtn = document.getElementById('switchBtn');
-    const switchInput = document.getElementById('switchInput');
-    switchBtn.addEventListener('change', () => { switchTemp(switchInput, dataFields[2]); }, false);
+    if (info !== 'error') {
+      showData(dataFields, info);
+      changeStyle(dataFields, info);
+      const switchBtn = document.getElementById('switchBtn');
+      const switchInput = document.getElementById('switchInput');
+      switchBtn.addEventListener('change', () => { switchTemp(switchInput, dataFields[2]); }, false);
+    } else {
+      dataFields[0].innerHTML = 'Something wrong! Try again.';
+    }
   });
   e.preventDefault();
 });
