@@ -254,6 +254,7 @@ input:checked + .slider:before {
   
   #content{
     padding: 2% 25%;
+    margin: auto;
     background-color:rgba(151, 41, 41, 0.26);
   }
 
@@ -290,9 +291,6 @@ input:checked + .slider:before {
   }
   span {
     color : rgb(240, 240, 9)
-  }
-  .weatherIcon {
-  
   }
   .switch {
     position: relative;
