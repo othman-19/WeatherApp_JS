@@ -5,9 +5,6 @@ A weather app that pulls from the OpenWeatherMap API to allow users to search fo
 
 > This project is part of a series of projects to be completed by students of [Microverse](https://www.microverse.org/ "The Global School for Remote Software Developers!").
 
-The Weather App project comes at the end of the Asynchronous Javascript and APIs section of the Javascript course. It tests the knowledge of about asynchronous communication with promises or async/await and when to use them.
-
-
 ## Built With
 
 - JavaScript (ES6/ES2015).
