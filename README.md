@@ -1,10 +1,12 @@
 # # PROJECT: WEATHER APP.
-
-> This project is part of a series of projects to be completed by students of [Microverse](https://www.microverse.org/ "The Global School for Remote Software Developers!").
+A weather app that pulls from the OpenWeatherMap API to allow users to search for and view the forecast in cities worldwide. Built with Html,CSS and JavaScript.
 
 ![screenshot](./app_screenshot.png)
 
+> This project is part of a series of projects to be completed by students of [Microverse](https://www.microverse.org/ "The Global School for Remote Software Developers!").
+
 The Weather App project comes at the end of the Asynchronous Javascript and APIs section of the Javascript course. It tests the knowledge of about asynchronous communication with promises or async/await and when to use them.
+
 
 ## Built With
 
@@ -15,7 +17,8 @@ The Weather App project comes at the end of the Asynchronous Javascript and APIs
 - DOM manipulation.
 - Webpack (NPM).
 - ESlint.
-- JavaScript async_await, promices, json, import/export modules and fetch data technics.
+- JSON.
+- JavaScript async_await, promises, import/export modules and fetch data technics.
 
 ## Live Demo
 
