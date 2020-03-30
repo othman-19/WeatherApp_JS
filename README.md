@@ -21,6 +21,14 @@ A weather app that pulls from the OpenWeatherMap API to allow users to search fo
 
 [Live Demo Link](https://othman-19.github.io/WeatherApp_JS/)
 
+## Features
+
+- User can see Weather status by entering the city name in the search bar.
+
+## Future features
+- Add Weather status for 24 hours and 7 days.
+- Add Weather information page.
+
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
@@ -46,6 +54,16 @@ To get a local copy up and running follow these simple example steps.
 
 ## Author(s)
 1. [Othamane Naamani](https://github.com/othman-19/).
+
+## Contact
+
+[Othmane Namani](https://github.com/othman-19/)  
+[Email: othmanenaamani@gmail.com](mailto:othmanenaamani@gmail.com)  
+[Portfilio](https://othman-19.github.io/my_portfolio/)  
+[LinkedIn](https://www.linkedin.com/in/othman-namani/)  
+[twitter](https://twitter.com/ONaamani)  
+[DEV Community](https://dev.to/othman)  
+[Angel List](https://angel.co/othmane-namani)  
 
 ## 🤝 Contributing
 
